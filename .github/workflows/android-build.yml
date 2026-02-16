@@ -27,6 +27,10 @@ jobs:
 
       - name: Get dependencies
         run: flutter pub get
+      - name: Static Analysis
+        run: flutter analyze
+      - name: Run tests
+        run: flutter test
 
       - name: Build APK
         run: flutter build apk --release
